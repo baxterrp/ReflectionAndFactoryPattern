@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculatorWithReflectionAndFactory", "SimpleCalculatorWithReflectionAndFactory\SimpleCalculatorWithReflectionAndFactory.csproj", "{0FBE16B0-7820-48F5-BD2D-2CF02D54F1F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FBE16B0-7820-48F5-BD2D-2CF02D54F1F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FBE16B0-7820-48F5-BD2D-2CF02D54F1F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FBE16B0-7820-48F5-BD2D-2CF02D54F1F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FBE16B0-7820-48F5-BD2D-2CF02D54F1F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {169316BC-8B94-4558-A671-8F7F8092C0A4}
+	EndGlobalSection
+EndGlobal

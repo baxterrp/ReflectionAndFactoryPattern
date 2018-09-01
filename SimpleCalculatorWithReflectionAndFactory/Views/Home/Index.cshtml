@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div>
+    <input type="radio" id="add" name="classes" value="SimpleCalculatorWithReflectionAndFactory.MathStuff.AdditionCalculator"/>
+    <label for="add">add</label>
+</div>
+
+<div>
+    <input type="radio" id="subtract" name="classes" value="SimpleCalculatorWithReflectionAndFactory.MathStuff.SubtractionCalculator"/>
+    <label for="subtract">subtract</label>
+</div>
+
+<div>
+    <input type="radio" id="divide" name="classes" value="SimpleCalculatorWithReflectionAndFactory.MathStuff.DivisionCalculator"/>
+    <label for="divide">divide</label>
+</div>
+
+<div>
+    <input type="radio" id="multiply" name="classes" value="SimpleCalculatorWithReflectionAndFactory.MathStuff.MultiplicationCalculator"/>
+    <label for="multiply">multiply</label>
+</div>
+
+<label for="value-a">Value A</label>
+<input type="text" id="value-a" />
+
+<label for="value-b">Value B</label>
+<input type="text" id="value-b" />
+
+
+<button id="go">Go</button>
+
+<div id="results">Calculated Value : No Results Yet</div>
+<div id="count">Times Clicked(would reset to zero if page reloaded) : 0</div>
+<script>
+    $(function () {
+        var calculations = 0;
+        $("#go").on("click", function (event) {
+
+            calculations++;
+            var className = $('input[name=classes]:checked').val();
+            var a = $("#value-a").val();
+            var b = $("#value-b").val();
+
+            $.ajax({
+                url: '@Url.Action("CalculateResults", "Home")',
+                type: 'POST',
+                data: {
+                    className: className,
+                    a: a,
+                    b: b
+                },
+                success: function (data) {
+                    $("#results").html("Calculated Value : " + data);
+                    $("#count").html("Times Clicked(would reset to zero if page reloaded) : " + calculations);
+                }
+            });
+
+        });
+    });
+</script>
